@@ -14,7 +14,7 @@
     </div>
 
     <div class="contant-form">
-        <form onsubmit="sendEmail(); reset(); return false;">
+        <form action="https://formsubmit.co/your@email.com" method="POST">
             <input name="name"  type="text" id="name" class="form-control" placeholder="Your Name" required> <br>
             <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required> <br>
             <input name="text" type="text" id="phone" class="form-control" placeholder="Phone no" required> <br>
@@ -23,25 +23,5 @@
             <button class="submit" type="submit"> send</button>
         </form>
     </div>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script> 
-function sendEmail(){
-    Email.send({
-            Host : "smtp.gmail.com",
-            Username : "bethelonwuk19@gmail.com",
-            Password : "bet1chuks",
-            To : 'bethelonwuk19@gmail.com',
-            From : document.getElementById("email").value,
-            Subject : "subject",
-            Body : "Name: " + document.getElementById("name").value
-                +"<br> Email: " + document.getElementById("email").value
-                +"<br> Phone no: " + document.getElementById("phone").value
-                +"<br> Message: " + document.getElementById("message").value
-        }).then(
-        message => alert("Succesfull")
-        );
-
-}
-</script>
 </body>
 </html>
